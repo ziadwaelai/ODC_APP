@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:odc_app/layout/cubit/cubit.dart';
 import 'package:odc_app/layout/cubit/states.dart';
+import 'package:odc_app/shared/styles/colorsStyle.dart';
 
 class AppLayout extends StatelessWidget {
   @override
@@ -13,23 +14,9 @@ class AppLayout extends StatelessWidget {
 
         return Scaffold(
           backgroundColor: Colors.white,
-          appBar: AppBar(
-            automaticallyImplyLeading: false,
-            backgroundColor: Colors.white,
-            elevation: 0,
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Image.asset(
-                  'assets/images/Logo4.png',
-                  fit: BoxFit.contain,
-                  height: 40,
-                ),
-              ],
-            ),
-          ),
           body: cubit.screens[cubit.currentIndex],
           bottomNavigationBar: BottomNavigationBar(
+            selectedItemColor: defColor,
             elevation: 0,
             currentIndex: cubit.currentIndex,
             onTap: (index) {
