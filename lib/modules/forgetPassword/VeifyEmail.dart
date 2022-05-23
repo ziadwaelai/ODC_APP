@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:odc_app/modules/forgetPassword/CreateNewPassword.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-import '../../shared/styles/CustomButtom.dart';
+import '../../shared/styles/customButtom.dart';
 import '../../shared/styles/colorsStyle.dart';
 
 class VerifyScreen extends StatefulWidget {

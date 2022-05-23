@@ -37,17 +37,20 @@ dependencies:
   flutter_bloc: ^8.0.1
   smooth_page_indicator: ^1.0.0+2
   pin_code_fields: ^7.4.0
+  flutter_native_splash: ^1.2.3
+
 
   
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_native_splash: ^2.1.6
-flutter_native_splash:
-  color: "#FFFFFF"
-  image: "assets/images/Logo.png"
+
+flutter_native_splash: 
+  color: "#ffffff"
+  image: assets/images/Logo.png
   android: true
+  ios: true
 
 
   # The "flutter_lints" package below contains a set of recommended lints to

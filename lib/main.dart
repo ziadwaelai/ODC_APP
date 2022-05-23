@@ -4,6 +4,8 @@ import 'package:odc_app/layout/cubit/cubit.dart';
 import 'package:odc_app/layout/cubit/states.dart';
 import 'package:odc_app/modules/onBorading/onBoradingScreen.dart';
 
+import 'modules/courseDetails/courseDetails.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
               debugShowCheckedModeBanner: false,
               title: 'ODC',
               theme: ThemeData(primarySwatch: Colors.orange),
-              home: OnBordingScreen());
+              home: CourseDetails());
         },
       ),
     );

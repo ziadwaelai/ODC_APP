@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:odc_app/shared/styles/colorsStyle.dart';
 
 import '../../layout/layout.dart';
-import '../../shared/styles/CustomButtom.dart';
+import '../../shared/styles/customButtom.dart';
 import '../login/loginScreen.dart';
 
 class RegisterScreen extends StatefulWidget {
