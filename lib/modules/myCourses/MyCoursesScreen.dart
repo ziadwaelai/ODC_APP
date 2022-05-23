@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:odc_app/modules/myCourses/courseItemWidget.dart';
 import 'package:odc_app/shared/styles/colorsStyle.dart';
 
 class MyCoursesScreen extends StatelessWidget {
@@ -17,6 +18,19 @@ class MyCoursesScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.white,
         elevation: 0,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            courseItem("assets/images/onBording1.png",
+                "Learn UI/UX for Beginners", "ziad"),
+            courseItem("assets/images/onBording1.png",
+                "Learn UI/UX for Beginners", "ziad"),
+            courseItem("assets/images/onBording1.png",
+                "Learn UI/UX for Beginners", "ziad")
+          ],
+        ),
       ),
     );
   }

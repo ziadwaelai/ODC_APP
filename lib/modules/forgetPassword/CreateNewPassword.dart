@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:odc_app/modules/forgetPassword/VeifyEmail.dart';
+
+import 'package:odc_app/shared/styles/customTextFormField.dart';
 
 import '../../shared/styles/CustomButtom.dart';
-import '../../shared/styles/colorsStyle.dart';
+import 'VeifyEmail.dart';
 
 class CreateNewPassword extends StatelessWidget {
-  const CreateNewPassword({Key? key}) : super(key: key);
+  TextEditingController? passwordController;
+  TextEditingController? ConfirmPasswordController;
 
   @override
   Widget build(BuildContext context) {
@@ -18,52 +19,27 @@ class CreateNewPassword extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(children: [
-          Image(image: AssetImage("assets/images/Group3.png")),
-          SizedBox(
-            height: 30,
-          ),
-          Text(
-            "Please enter New Password",
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          Container(
-              decoration: BoxDecoration(
-                color: Color.fromARGB(108, 224, 224, 224),
-                borderRadius: new BorderRadius.circular(10.0),
-              ),
-              child: Padding(
-                  padding: EdgeInsets.only(left: 15, right: 15, top: 5),
-                  child: TextFormField(
-                      obscureText: false,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        labelText: 'New Password',
-                      )))),
-          Container(
-              decoration: BoxDecoration(
-                color: Color.fromARGB(108, 224, 224, 224),
-                borderRadius: new BorderRadius.circular(10.0),
-              ),
-              child: Padding(
-                  padding: EdgeInsets.only(left: 15, right: 15, top: 5),
-                  child: TextFormField(
-                      obscureText: false,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        labelText: 'Confirm Password',
-                      )))),
-          SizedBox(
-            height: 20,
-          ),
-          customButtom(context, VerifyScreen(), "Submit")
-        ]),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(children: [
+            Image(image: AssetImage("assets/images/Group3.png")),
+            SizedBox(
+              height: 30,
+            ),
+            Text(
+              "Please enter New Password",
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            CustomTextFormFild("label", passwordController),
+            CustomTextFormFild("label", ConfirmPasswordController),
+            customButtom(context, VerifyScreen(), "Submit")
+          ]),
+        ),
       ),
     );
   }
