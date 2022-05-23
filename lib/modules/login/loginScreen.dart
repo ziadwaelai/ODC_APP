@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:odc_app/modules/forgetPassword/forgetPasswordScreen.dart';
 import 'package:odc_app/modules/login/cubit/cubit.dart';
 import 'package:odc_app/modules/login/cubit/states.dart';
@@ -23,7 +24,29 @@ class _LogInScreenState extends State<LogInScreen> {
     return BlocProvider(
         create: (context) => loginCubit(),
         child: BlocConsumer<loginCubit, LoginState>(
-          listener: (context, state) {},
+          listener: (context, state) {
+            if (state is LoginSussessState) {
+              Fluttertoast.showToast(
+                  msg: "Login successful",
+                  toastLength: Toast.LENGTH_LONG,
+                  gravity: ToastGravity.BOTTOM,
+                  timeInSecForIosWeb: 1,
+                  backgroundColor: defColor,
+                  textColor: Colors.white,
+                  fontSize: 16.0);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => AppLayout()));
+            } else if (state is LoginErrorState) {
+              Fluttertoast.showToast(
+                  msg: "Email or password is incorrect",
+                  toastLength: Toast.LENGTH_LONG,
+                  gravity: ToastGravity.BOTTOM,
+                  timeInSecForIosWeb: 1,
+                  backgroundColor: Colors.red,
+                  textColor: Colors.white,
+                  fontSize: 16.0);
+            }
+          },
           builder: (context, state) {
             return Form(
               key: formKey,
@@ -175,12 +198,8 @@ class _LogInScreenState extends State<LogInScreen> {
                                       if (formKey.currentState!.validate()) {
                                         loginCubit.get(context).userLogin(
                                             emailController.text,
-                                            passwordController.text);
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    AppLayout()));
+                                            passwordController.text,
+                                            context);
                                       }
                                     },
                                     child: Text(

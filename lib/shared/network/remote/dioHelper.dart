@@ -9,6 +9,8 @@ class DioHelper {
         responseType: ResponseType.plain,
         headers: {
           'Content-Type': 'application/json',
+          'User-Agent': 'PostmanRuntime/7.29.0',
+          'Connection': 'keep-alive'
         }));
   }
 
