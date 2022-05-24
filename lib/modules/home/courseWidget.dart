@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:odc_app/models/courseModel.dart';
+import 'package:odc_app/modules/courseDetails/courseDetails.dart';
 
 import '../../shared/styles/colorsStyle.dart';
 
-Widget course(CoursModel model, i) {
+Widget course(CoursModel model, int i, context) {
   return InkWell(
-    onTap: (){},
+    onTap: () {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => CourseDetails(model: model, i: i)));
+    },
     child: Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(

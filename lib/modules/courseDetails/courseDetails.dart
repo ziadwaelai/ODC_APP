@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:odc_app/layout/cubit/cubit.dart';
-import 'package:odc_app/shared/styles/colorsStyle.dart';
+import 'package:odc_app/models/courseModel.dart';
 import 'package:odc_app/shared/styles/fontStyles.dart';
 
 import '../../shared/styles/CustomButtom.dart';
 
 class CourseDetails extends StatelessWidget {
-  const CourseDetails({Key? key}) : super(key: key);
+  final CoursModel model;
+  final int i;
+
+  const CourseDetails({Key? key, required this.model, required this.i})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
           child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(24.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -21,14 +25,18 @@ class CourseDetails extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
               ),
-              alignment: Alignment.center,
               width: 400,
               height: 250,
               child: Stack(
                 children: [
-                  Image(
-                    image: AssetImage("assets/images/onBording1.png"),
-                    fit: BoxFit.cover,
+                  Container(
+                    width: 400,
+                    height: 250,
+                    child: Image(
+                      image: NetworkImage(
+                          model.data![i].category!.imageUrl as String),
+                      fit: BoxFit.fill,
+                    ),
                   ),
                   InkWell(
                     onTap: () {
@@ -54,9 +62,12 @@ class CourseDetails extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
             Center(
               child: Text(
-                "Learn UI/UX for beginners",
+                model.data![i].courseName as String,
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
             ),
@@ -65,7 +76,7 @@ class CourseDetails extends StatelessWidget {
             ),
             Center(
               child: Text(
-                "Author: Ahmed Abaza",
+                "Author:${model.data![i].admin!.adminName as String}",
                 style: TextStyle(color: Color.fromARGB(255, 184, 184, 184)),
               ),
             ),
@@ -84,6 +95,46 @@ class CourseDetails extends StatelessWidget {
                 style: TextStyle(fontSize: 15, color: Colors.grey),
               ),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Container(
+                  child: Image(
+                    image: AssetImage("assets/images/Level.png"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Text(
+                  model.data![i].courseLevel as String,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              children: [
+                Container(
+                  child: Image(
+                    image: AssetImage("assets/images/location.png"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Text(
+                  "Cairo",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )
+              ],
+            )
           ],
         ),
       )),

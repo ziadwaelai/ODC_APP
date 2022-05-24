@@ -152,8 +152,8 @@ class HomeScreen extends StatelessWidget {
                     child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: cubit.coursModel!.data!.length,
-                        itemBuilder: (context, i) {
-                          return course(cubit.coursModel as CoursModel, i);
+                        itemBuilder: (context, i,) {
+                          return course(cubit.coursModel as CoursModel, i,context);
                         }),
                   )
                 ],
