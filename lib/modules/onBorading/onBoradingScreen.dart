@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:odc_app/layout/cubit/cubit.dart';
 import 'package:odc_app/modules/onBorading/onBoardingItem.dart';
 import 'package:odc_app/modules/onBorading/onBordingModel.dart';
 import 'package:odc_app/shared/styles/colorsStyle.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
 import '../login/loginScreen.dart';
 import '../register/registerScreen.dart';
 
@@ -28,7 +28,6 @@ class _OnBordingScreen extends State<OnBordingScreen> {
   ];
 
   bool isLast = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,10 +101,7 @@ class _OnBordingScreen extends State<OnBordingScreen> {
                   height: 40,
                   child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => LogInScreen()));
+                        AppCubit.get(context).subimtToLogin(context);
                       },
                       child: Text(
                         "Log in",

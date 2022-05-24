@@ -16,7 +16,7 @@ class UserModel {
     data['success'] = this.success;
     data['message'] = this.message;
     if (this.data != null) {
-      data['data'] = this.data;
+      data['data'] = this.data!.toJson();
     }
     return data;
   }

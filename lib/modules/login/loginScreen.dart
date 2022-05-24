@@ -4,6 +4,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:odc_app/modules/forgetPassword/forgetPasswordScreen.dart';
 import 'package:odc_app/modules/login/cubit/cubit.dart';
 import 'package:odc_app/modules/login/cubit/states.dart';
+import 'package:odc_app/modules/login/tostWidget.dart';
 import 'package:odc_app/modules/register/registerScreen.dart';
 import 'package:odc_app/shared/styles/colorsStyle.dart';
 
@@ -26,25 +27,11 @@ class _LogInScreenState extends State<LogInScreen> {
         child: BlocConsumer<loginCubit, LoginState>(
           listener: (context, state) {
             if (state is LoginSussessState) {
-              Fluttertoast.showToast(
-                  msg: "Login successful",
-                  toastLength: Toast.LENGTH_LONG,
-                  gravity: ToastGravity.BOTTOM,
-                  timeInSecForIosWeb: 1,
-                  backgroundColor: defColor,
-                  textColor: Colors.white,
-                  fontSize: 16.0);
+              tost(text: "Login successful");
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => AppLayout()));
             } else if (state is LoginErrorState) {
-              Fluttertoast.showToast(
-                  msg: "Email or password is incorrect",
-                  toastLength: Toast.LENGTH_LONG,
-                  gravity: ToastGravity.BOTTOM,
-                  timeInSecForIosWeb: 1,
-                  backgroundColor: Colors.red,
-                  textColor: Colors.white,
-                  fontSize: 16.0);
+              tost(text: "Email or password is incorrect", error: true);
             }
           },
           builder: (context, state) {
