@@ -1,16 +1,36 @@
 # odc_app
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## App Screens
+![Splash Screen](https://user-images.githubusercontent.com/73315485/170498673-6e4ae408-3510-4f1a-ad05-9ff168e978ad.png)
+![Onboarding Screen - 1](https://user-images.githubusercontent.com/73315485/170498652-3f71546c-86ed-4fb9-b484-53b79ced9d88.png)
+![Onboarding Screen - 2](https://user-images.githubusercontent.com/73315485/170498655-c08a3fe7-a04a-47d6-89db-b082603097be.png)
+![Onboarding Screen - 3](https://user-images.githubusercontent.com/73315485/170498656-33ffdae8-30ea-40e7-a989-3e6b0779a4bf.png)
+![Login](https://user-images.githubusercontent.com/73315485/170498640-fc01fba1-506f-4472-bf29-ce5151f92b74.png)
+![SignUp](https://user-images.githubusercontent.com/73315485/170498670-3a7eccdb-e66e-4258-a053-a4088a6651d2.png)
+![Privacy Policy](https://user-images.githubusercontent.com/73315485/170498659-c0357803-58c7-425d-9261-6397faf8a73f.png)
+![1- Forget Password](https://user-images.githubusercontent.com/73315485/170498683-08a7e4e5-5d61-4589-8e09-5b3d51c4a967.png)
+![2- Forget Password](https://user-images.githubusercontent.com/73315485/170498687-bfd0ae2e-dcb2-4992-8b14-5f775a4a80fd.png)
+![3- Forget Password](https://user-images.githubusercontent.com/73315485/170498691-c45e2f8f-c330-4fb6-a755-5ce993cf09dc.png)
+![Home - Slider](https://user-images.githubusercontent.com/73315485/170498621-98ff0b32-e10d-4570-ad76-329ccfedfc55.png)
+![Home](https://user-images.githubusercontent.com/73315485/170498632-dc9d01ad-0904-44fc-b8f0-dbae49dec025.png)
+![Home - Slider 2](https://user-images.githubusercontent.com/73315485/170498777-592b3884-9230-4454-9f16-b44d4f5170e6.png)
+![HR interview](https://user-images.githubusercontent.com/73315485/170498636-d2223e02-bee0-48cc-8be4-0673f68a06c6.png)
+![My Courses](https://user-images.githubusercontent.com/73315485/170498641-fc872a66-ca6a-4d7d-9c99-f53adad05a5e.png)
+![New Courses](https://user-images.githubusercontent.com/73315485/170498647-2f5c6ed2-9fc1-4874-8277-1f328a24b658.png)
+![Profile - Certificates](https://user-images.githubusercontent.com/73315485/170498663-3cc245e0-8138-4de9-8a2e-38a41d97bf32.png)
+![Profile - Logout](https://user-images.githubusercontent.com/73315485/170498668-5e118ece-2ac5-40ed-9971-e998b66e6fa9.png)
+![Waiting the Result](https://user-images.githubusercontent.com/73315485/170498676-87d7c8f1-b691-4ae0-82df-ba263c49f7b6.png)
+![Web Development](https://user-images.githubusercontent.com/73315485/170498678-abe7c708-d41c-4bf3-be58-735404bec7e0.png)
+![Categories](https://user-images.githubusercontent.com/73315485/170498695-1838f4d8-ba98-4fc7-87dc-2eee780c3b8f.png)
+![Congrats](https://user-images.githubusercontent.com/73315485/170498701-4529a570-b344-46e2-b50e-d3db5730751b.png)
+![Course Details - Code Sent](https://user-images.githubusercontent.com/73315485/170498702-48d08aa9-3f88-4476-91f4-bd579b12f3d5.png)
+![Course Details - Enter Code 2](https://user-images.githubusercontent.com/73315485/170498713-93dfc110-9f72-480b-81db-2746ddb06c68.png)
+![Course Details - Enter Code 3](https://user-images.githubusercontent.com/73315485/170498720-a243a452-0328-4800-b0ad-794c97ecb737.png)
+![Course Details - Enter Code](https://user-images.githubusercontent.com/73315485/170498728-88cb32d5-7da2-45b8-bad1-3410c666d7e4.png)
+![Course Details](https://user-images.githubusercontent.com/73315485/170498737-b01fc6b9-1c5f-438a-9451-c91d69aa1caf.png)
+![Course Exam - Final Question](https://user-images.githubusercontent.com/73315485/170498746-2edf58dc-e069-4d2c-8221-fd703d0baf59.png)
+![Course Exam - Question 1 - NotSolved](https://user-images.githubusercontent.com/73315485/170498751-1cd12191-c806-4b0f-8bbf-d97889a717d5.png)
+![Course Exam - Question 1](https://user-images.githubusercontent.com/73315485/170498756-aeca8d82-bc64-4133-b121-b56ef055d492.png)
+![Course Exam - Question n-1](https://user-images.githubusercontent.com/73315485/170498758-8fce62a8-ae93-40ee-b7c9-cd02b80eadd1.png)
+![Course Exam](https://user-images.githubusercontent.com/73315485/170498761-46299166-59de-4398-8e4c-bdd98c46f50b.png)
+![Course Fails](https://user-images.githubusercontent.com/73315485/170498765-1e82ac0c-cd3b-46b5-89ff-3ad603f08017.png)
+![Course Screen After Complete Course Registration](https://user-images.githubusercontent.com/73315485/170498768-52160f4a-0edc-45ef-97f7-2d293978e5b3.png)
