@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:odc_app/modules/forgetPassword/forgetPasswordScreen.dart';
 import 'package:odc_app/modules/login/cubit/cubit.dart';
 import 'package:odc_app/modules/login/cubit/states.dart';
@@ -25,7 +24,7 @@ class _LogInScreenState extends State<LogInScreen> {
     return BlocProvider(
         create: (context) => loginCubit(),
         child: BlocConsumer<loginCubit, LoginState>(
-          listener: (context, state) {
+          listener: (context, state) async {
             if (state is LoginSussessState) {
               tost(text: "Login successful");
               Navigator.push(context,

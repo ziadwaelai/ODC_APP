@@ -13,7 +13,7 @@ void main() async {
   Bloc.observer = MyBlocObserver();
   DioHelper.init();
   await CacheHelper.init();
-  bool onBoarding = CacheHelper.getData(key: 'onBoarding');
+  bool onBoarding = CacheHelper.getData(key: 'onBoarding')??true;
   print(onBoarding);
   runApp(MyApp(onBoarding: onBoarding));
 }

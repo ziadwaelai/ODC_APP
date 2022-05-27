@@ -9,8 +9,19 @@ import 'package:odc_app/shared/network/local/cacheHelper.dart';
 import 'package:odc_app/shared/styles/colorsStyle.dart';
 import '../../shared/styles/fontStyles.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    AppCubit.get(context).getCourses();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +108,6 @@ class HomeScreen extends StatelessWidget {
                               Spacer(),
                               FloatingActionButton(
                                 onPressed: () {
-                                  print(CacheHelper.getData(key: "Token"));
                                   AppCubit.get(context).getCourses();
                                 },
                                 child: Icon(
@@ -155,6 +165,8 @@ class HomeScreen extends StatelessWidget {
                           context,
                           i,
                         ) {
+                          
+
                           if (cubit.coursModel == null) {
                             return CircularProgressIndicator();
                           } else {
