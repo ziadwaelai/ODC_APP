@@ -7,7 +7,6 @@ import 'package:odc_app/modules/home/categoriesWidget.dart';
 import 'package:odc_app/modules/home/courseWidget.dart';
 import 'package:odc_app/shared/network/local/cacheHelper.dart';
 import 'package:odc_app/shared/styles/colorsStyle.dart';
-
 import '../../shared/styles/fontStyles.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -152,8 +151,16 @@ class HomeScreen extends StatelessWidget {
                     child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: cubit.coursModel!.data!.length,
-                        itemBuilder: (context, i,) {
-                          return course(cubit.coursModel as CoursModel, i,context);
+                        itemBuilder: (
+                          context,
+                          i,
+                        ) {
+                          if (cubit.coursModel == null) {
+                            return CircularProgressIndicator();
+                          } else {
+                            return course(
+                                cubit.coursModel as CoursModel, i, context);
+                          }
                         }),
                   )
                 ],

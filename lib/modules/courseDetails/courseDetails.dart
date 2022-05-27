@@ -29,12 +29,13 @@ class CourseDetails extends StatelessWidget {
               height: 250,
               child: Stack(
                 children: [
-                  Container(
-                    width: 400,
-                    height: 250,
-                    child: Image(
-                      image: NetworkImage(model.data![i].imageUrl as String),
-                      fit: BoxFit.fill,
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: Image.network(
+                      (model.data![i].imageUrl as String),
+                      height: 250.0,
+                      width: 400,
+                      fit: BoxFit.cover,
                     ),
                   ),
                   InkWell(

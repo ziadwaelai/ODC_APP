@@ -4,7 +4,7 @@ class DioHelper {
   static late Dio dio;
   static init() {
     dio = Dio(BaseOptions(
-      baseUrl: "https://3ca3-196-205-94-85.eu.ngrok.io/api/v1",
+      baseUrl: "https://3ca3-196-205-94-85.eu.ngrok.io/api/v1/",
       receiveDataWhenStatusError: true,
     ));
   }
@@ -34,9 +34,8 @@ class DioHelper {
       'Content-Type': 'application/json',
       'User-Agent': 'PostmanRuntime/7.29.0',
       'Connection': 'keep-alive',
-      'Authorization': token
+      'Authorization': 'Bearer $token',
     };
-    print("object");
     return await dio.post(path, queryParameters: query, data: data);
   }
 }

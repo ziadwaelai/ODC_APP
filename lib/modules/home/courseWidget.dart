@@ -18,17 +18,21 @@ Widget course(CoursModel model, int i, context) {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 270,
-            height: 150,
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 221, 221, 221),
-              borderRadius: BorderRadius.all(Radius.circular(10.0)),
-            ),
-            child: Image(
-              image: NetworkImage(model.data![i].imageUrl as String),
-              fit: BoxFit.fill,
-            ),
-          ),
+              width: 270,
+              height: 150,
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 221, 221, 221),
+                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: Image.network(
+                  (model.data![i].imageUrl as String),
+                  height: 150.0,
+                  width: 270,
+                  fit: BoxFit.cover,
+                ),
+              )),
           SizedBox(
             height: 10,
           ),
