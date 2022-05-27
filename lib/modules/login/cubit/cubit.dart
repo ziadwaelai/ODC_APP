@@ -20,14 +20,15 @@ class loginCubit extends Cubit<LoginState> {
     }).then((value) {
       // message = value.data["message"];
       emit(LoginSussessState(userModel));
-      TOKEN = value.data["data"]["access_token"];
-      CacheHelper.saveData(key: "Token", value: TOKEN);
+      // TOKEN = value.data["data"]["access_token"];
+      // CacheHelper.saveData(key: "Token", value: TOKEN);
       // userModel = UserModel.fromJson(value.data);
     }).catchError((onError) {
       // if (onError is DioError) {
       //   message = onError.response?.data["message"];
       //   print()
       // } else {
+      print(onError);
       emit(LoginErrorState(onError.toString()));
       // }
     });

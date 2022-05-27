@@ -37,6 +37,7 @@ class Data {
   int? exam2;
   int? exam3;
   int? finalProject;
+  String? imageUrl;
   String? createdAt;
   Category? category;
   Admin? admin;
@@ -51,6 +52,7 @@ class Data {
       this.exam2,
       this.exam3,
       this.finalProject,
+      this.imageUrl,
       this.createdAt,
       this.category,
       this.admin});
@@ -65,6 +67,7 @@ class Data {
     exam2 = json['exam2'];
     exam3 = json['exam3'];
     finalProject = json['finalProject'];
+    imageUrl = json['image_url'];
     createdAt = json['createdAt'];
     category = json['Category'] != null
         ? new Category.fromJson(json['Category'])
@@ -83,6 +86,7 @@ class Data {
     data['exam2'] = this.exam2;
     data['exam3'] = this.exam3;
     data['finalProject'] = this.finalProject;
+    data['image_url'] = this.imageUrl;
     data['createdAt'] = this.createdAt;
     if (this.category != null) {
       data['Category'] = this.category!.toJson();

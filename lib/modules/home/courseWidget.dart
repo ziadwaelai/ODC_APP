@@ -25,7 +25,7 @@ Widget course(CoursModel model, int i, context) {
               borderRadius: BorderRadius.all(Radius.circular(10.0)),
             ),
             child: Image(
-              image: NetworkImage(model.data![i].category!.imageUrl as String),
+              image: NetworkImage(model.data![i].imageUrl as String),
               fit: BoxFit.fill,
             ),
           ),

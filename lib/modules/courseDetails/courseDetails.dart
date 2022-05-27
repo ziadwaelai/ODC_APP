@@ -33,8 +33,7 @@ class CourseDetails extends StatelessWidget {
                     width: 400,
                     height: 250,
                     child: Image(
-                      image: NetworkImage(
-                          model.data![i].category!.imageUrl as String),
+                      image: NetworkImage(model.data![i].imageUrl as String),
                       fit: BoxFit.fill,
                     ),
                   ),
